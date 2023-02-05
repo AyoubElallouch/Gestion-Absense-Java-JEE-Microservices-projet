@@ -6,22 +6,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor @Builder
 public class Professeur {
-    @Id
-    private String id;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String nom;
-    private Double numClass;
-    private String nomClass;
-    private Date TempsDecours;
-    private String matiere;
-    @Enumerated(EnumType.STRING)
-    private TauxAbsense tauxAbsense;
+    private Long coursID;
+
+
 
 }

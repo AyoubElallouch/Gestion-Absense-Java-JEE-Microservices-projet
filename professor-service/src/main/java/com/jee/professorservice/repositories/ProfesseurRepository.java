@@ -8,5 +8,5 @@ import java.util.List;
 
 @RepositoryRestResource
 public interface ProfesseurRepository  extends JpaRepository<Professeur,String> {
-    List<Professeur> findByNom(String nom);
+    // List<Professeur> findByNom(String nom);
 }
