@@ -1,6 +1,7 @@
 package com.jee.coursservice.web;
 
 import com.jee.coursservice.entity.Cours;
+import com.jee.coursservice.models.Classroom;
 import com.jee.coursservice.repositories.CoursRepository;
 import com.jee.coursservice.services.ClassroomRestService;
 import com.jee.coursservice.services.ProfessorRestService;
@@ -40,5 +41,23 @@ public class CoursRestController {
     public void deleteCours(@PathVariable Long id){
         Cours cours = coursRepository.findById(id).get();
         coursRepository.delete(cours);
+    }
+    @PutMapping("/cours/{Id}")
+    public Cours updateCours(@PathVariable Long id, @RequestBody Cours newCours) {
+        return coursRepository.findById(id).map(cours -> {
+            if(newCours.getName()!= null)
+                cours.setName(newCours.getName());
+            if(newCours.getProfessorId()!= null)
+                cours.setProfessorId(newCours.getProfessorId());
+            if(newCours.getClassroomId()!= null)
+                cours.setClassroomId(newCours.getClassroomId());
+            cours.setDuration(newCours.getDuration());
+            if(newCours.getStarterDate()!= null)
+                cours.setStarterDate(newCours.getStarterDate());
+            return coursRepository.save(newCours);
+        }).orElseGet(()->{
+           newCours.setId(id);
+           return coursRepository.save(newCours);
+        });
     }
 }
