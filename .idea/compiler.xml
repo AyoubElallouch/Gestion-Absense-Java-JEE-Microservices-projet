@@ -12,6 +12,7 @@
         <module name="student-service" />
         <module name="Discovery-Service" />
         <module name="professor-service" />
+        <module name="Discovery-Service" />
         <module name="Absence-Service" />
       </profile>
     </annotationProcessing>
