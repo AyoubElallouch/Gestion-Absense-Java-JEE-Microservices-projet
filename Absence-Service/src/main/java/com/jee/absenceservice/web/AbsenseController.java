@@ -8,6 +8,7 @@ import com.jee.absenceservice.services.StudentRestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.ws.rs.Path;
 import java.util.List;
 
 @RestController
@@ -45,5 +46,30 @@ public class AbsenseController {
         else {
             absenseRepository.delete(absense);
         }
+    }
+    @PostMapping("/absenses")
+    public void addAbsense(@RequestBody Absense absense){
+        if (absense == null) throw new RuntimeException("Invalid Absense");
+        else  {
+            absenseRepository.save(absense);
+        }
+    }
+    @PutMapping("/absenses/{id}")
+    public Absense updateabsense(@PathVariable Long id, @RequestBody Absense newAbsense){
+        return absenseRepository.findById(id).map(absense -> {
+            if(newAbsense.getCoursId()!= null)
+                absense.setCoursId(newAbsense.getCoursId());
+            if(newAbsense.getProfessorId()!= null)
+                absense.setProfessorId(newAbsense.getProfessorId());
+            if(newAbsense.getClassroomId()!= null)
+                absense.setClassroomId(newAbsense.getClassroomId());
+            if(newAbsense.getStudentId()!= null)
+                absense.setStudentId(newAbsense.getStudentId());
+            absense.setStatus(newAbsense.isStatus());
+            return absenseRepository.save(absense);
+        }).orElseGet(()->{
+            newAbsense.setId(id);
+            return absenseRepository.save(newAbsense);
+        });
     }
 }
