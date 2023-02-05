@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -9,6 +10,7 @@
         <module name="cours-service" />
         <module name="Gateway-Service" />
         <module name="student-service" />
+        <module name="Discovery-Service" />
         <module name="professor-service" />
         <module name="Discovery-Service" />
         <module name="Absence-Service" />
@@ -17,7 +19,7 @@
     <bytecodeTargetLevel>
       <module name="Absence-Service" target="17" />
       <module name="cours-service" target="17" />
-      <module name="Discovery-Service" target="1.6" />
+      <module name="Discovery-Service" target="17" />
       <module name="Gateway-Service" target="17" />
       <module name="professor-service" target="17" />
       <module name="student-service" target="17" />
