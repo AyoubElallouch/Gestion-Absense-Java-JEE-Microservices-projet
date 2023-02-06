@@ -9,8 +9,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cours-service" />
         <module name="Gateway-Service" />
+        <module name="student-service" />
         <module name="Discovery-Service" />
         <module name="professor-service" />
+        <module name="Discovery-Service" />
         <module name="Absence-Service" />
       </profile>
     </annotationProcessing>
@@ -20,6 +22,7 @@
       <module name="Discovery-Service" target="17" />
       <module name="Gateway-Service" target="17" />
       <module name="professor-service" target="17" />
+      <module name="student-service" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -29,6 +32,7 @@
       <module name="Gateway-Service" options="-parameters" />
       <module name="cours-service" options="-parameters" />
       <module name="professor-service" options="-parameters" />
+      <module name="student-service" options="-parameters" />
     </option>
   </component>
 </project>
