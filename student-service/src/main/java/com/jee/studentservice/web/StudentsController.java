@@ -7,6 +7,8 @@ import com.jee.studentservice.repositories.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class StudentsController {
     @Autowired
@@ -14,6 +16,22 @@ public class StudentsController {
     @Autowired
     private ClassroomRepository classroomRepository;
 
+    @GetMapping("/students")
+    public List<Student> students(){
+        return studentRepository.findAll();
+    }
+    @GetMapping("/students/{id}")
+    public Student studentById(@PathVariable Long id){
+        return studentRepository.findById(id).get();
+    }
+    @GetMapping("/classrooms")
+    public List<Classroom> classrooms(){
+        return classroomRepository.findAll();
+    }
+    @GetMapping("/classrooms/{id}")
+    public Classroom classroomById(@PathVariable Long id){
+        return classroomRepository.findById(id).get();
+    }
     @PostMapping("/students")
     public Student saveStudent(@RequestBody Student student){
         return studentRepository.save(student);
