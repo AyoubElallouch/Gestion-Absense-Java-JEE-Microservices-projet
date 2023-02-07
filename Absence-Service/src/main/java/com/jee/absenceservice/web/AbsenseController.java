@@ -15,11 +15,14 @@ import java.util.List;
 public class AbsenseController {
     @Autowired
     private AbsenseRepository absenseRepository;
+    @Autowired
     private StudentRestService studentRestService;
+    @Autowired
     private ProfessorRestService professorRestService;
+    @Autowired
     private CoursRestService coursRestService;
 
-    @GetMapping("/absense/{id}")
+    @GetMapping("/absenses/{id}")
     public Absense getAbsenseById(@PathVariable Long id){
         Absense absense = absenseRepository.findById(id).get();
         absense.setClassroom(studentRestService.findClassroomById(absense.getClassroomId()));

@@ -24,7 +24,7 @@ public class ProfessorServiceApplication implements CommandLineRunner {
         repositoryRestConfiguration.exposeIdsFor(Professor.class);
         for(int i=1; i<6; i++){
             Professor professor = new Professor();
-            professor.setNom("Prof_"+i);
+            professor.setName("Prof_"+i);
             professor.setCoursID((long)i);
             professorRepository.save(professor);
         }

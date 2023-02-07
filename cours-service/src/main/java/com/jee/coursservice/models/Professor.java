@@ -6,6 +6,6 @@ import lombok.Data;
 public class Professor {
     private Long id;
     private String name;
-    private Long coursId;
+    private Long coursID;
 
 }
