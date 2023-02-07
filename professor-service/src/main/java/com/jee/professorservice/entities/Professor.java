@@ -12,9 +12,6 @@ import javax.persistence.*;
 public class Professor {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nom;
+    private String name;
     private Long coursID;
-
-
-
 }

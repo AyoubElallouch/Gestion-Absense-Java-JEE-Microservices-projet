@@ -3,10 +3,10 @@ server:
 spring:
   application:
      name: Gateway-service
-   cloud:
+  cloud:
      discovery:
        enabled: true
-      gateway:
+     gateway:
        globalcors:
           cors-configurations:
             '[/**]':
@@ -17,27 +17,23 @@ spring:
                      - POST
                      - PUT
                      - DELETE
-      #  gateway:
-       #      routes:
-                #   - id: r1
-                # uri: lb://student-service
-                # predicates:
-                # - Path= /Students/**
-                # - Path= /Classroom/
-
-                # - id: r2
-                # uri: lb://course-service
-                # predicates:
-                # - Path= /Courses/
-
-                # - id: r3
-                # uri: lb://professors-service
-                #  predicates:
-                #  - Path= /Professors/
-
-                # - id: r4
-                # uri: lb://absence-service
-                # predicates:
-                #  - Path= /Absences/
-
-
+                     -
+#     gateway:
+#       routes:
+#         - id: r1
+#            uri: lb://student-service
+#            predicates:
+#             - Path= /Students/**
+#             - Path= /Classroom/
+#         - id: r2
+#            uri: lb://course-service
+#            predicates:
+#             - Path= /Courses/
+#         - id: r3
+#            uri: lb://professors-service
+#            predicates:
+#             - Path= /Professors/
+#         - id: r4
+#            uri: lb://absence-service
+#            predicates:
+#              - Path= /Absences/
