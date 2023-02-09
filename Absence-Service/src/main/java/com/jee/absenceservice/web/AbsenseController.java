@@ -8,7 +8,6 @@ import com.jee.absenceservice.services.StudentRestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.ws.rs.Path;
 import java.util.List;
 
 @RestController
@@ -73,6 +72,13 @@ public class AbsenseController {
         }).orElseGet(()->{
             newAbsense.setId(id);
             return absenseRepository.save(newAbsense);
+        });
+    }
+    @DeleteMapping("absenses/cours/{id}")
+    public void deleteAbsensesByCoursId(@PathVariable Long id){
+        List<Absense> absenseList = absenseRepository.findAbsenseByCoursId(id);
+        absenseList.forEach(A ->{
+            absenseRepository.delete(A);
         });
     }
 }

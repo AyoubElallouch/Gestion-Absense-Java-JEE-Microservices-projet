@@ -38,4 +38,12 @@ public class ProfessorsController {
         if(newProfessor.getCoursID() != null) professor.setCoursID(newProfessor.getCoursID());
         return professorRepository.save(professor);
     }
+    @PutMapping("professors/cours/{id}")
+    public void updateProfessorsCoursId(@PathVariable Long id){
+        List<Professor> professors = professorRepository.findProfessorByCoursID(id);
+        professors.forEach(p -> {
+            p.setCoursID(null);
+            professorRepository.save(p);
+        });
+    }
 }

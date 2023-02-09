@@ -1,8 +1,11 @@
 package com.jee.coursservice.web;
 
 import com.jee.coursservice.entity.Cours;
+import com.jee.coursservice.entity.Session;
 import com.jee.coursservice.models.Classroom;
+import com.jee.coursservice.models.Professor;
 import com.jee.coursservice.repositories.CoursRepository;
+import com.jee.coursservice.repositories.SessionRepository;
 import com.jee.coursservice.services.ClassroomRestService;
 import com.jee.coursservice.services.ProfessorRestService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +21,8 @@ public class CoursRestController {
     private ClassroomRestService classroomRestService;
     @Autowired
     private ProfessorRestService professorRestService;
+    @Autowired
+    private SessionRepository sessionRepository;
     @GetMapping("/cours/{id}")
     public Cours getCoursById(@PathVariable Long id){
         Cours cours=coursRepository.findById(id).get();
@@ -40,6 +45,7 @@ public class CoursRestController {
     @DeleteMapping("/cours/{id}")
     public void deleteCours(@PathVariable Long id){
         Cours cours = coursRepository.findById(id).get();
+        professorRestService.findProfessorByCoursId(id);
         coursRepository.delete(cours);
     }
     @PutMapping("/cours/{Id}")
@@ -52,12 +58,33 @@ public class CoursRestController {
             if(newCours.getClassroomId()!= null)
                 cours.setClassroomId(newCours.getClassroomId());
             cours.setDuration(newCours.getDuration());
-            if(newCours.getStarterDate()!= null)
-                cours.setStarterDate(newCours.getStarterDate());
             return coursRepository.save(newCours);
         }).orElseGet(()->{
            newCours.setId(id);
            return coursRepository.save(newCours);
         });
+    }
+    @PostMapping("/cours/session")
+    public Session saveAndGetSession(@RequestBody Session session){
+        if(session != null){
+            return sessionRepository.save(session);
+        }
+        else {
+            new RuntimeException("Session Invalid");
+        }
+        return null;
+    }
+    @GetMapping("/cours/sessions")
+    public List<Session> sessions(){
+        return sessionRepository.findAll();
+    }
+    @GetMapping("/cours/session")
+    public Session getLastSession(){
+        List<Session> sessions = sessionRepository.findAll();
+        return sessions.get(sessions.size());
+    }
+    @GetMapping("/cours/session/{id}")
+    public Session sessions(@PathVariable Long id){
+        return sessionRepository.findById(id).get();
     }
 }
