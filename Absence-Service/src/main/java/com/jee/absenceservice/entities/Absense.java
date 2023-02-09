@@ -21,6 +21,7 @@ public class Absense {
     private Long coursId;
     private Long classroomId;
     private boolean status;
+    private Long sessionId;
 
     @Transient
     private Cours cours;

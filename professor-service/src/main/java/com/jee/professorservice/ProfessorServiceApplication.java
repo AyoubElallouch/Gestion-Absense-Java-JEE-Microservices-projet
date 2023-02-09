@@ -25,6 +25,9 @@ public class ProfessorServiceApplication implements CommandLineRunner {
         for(int i=1; i<6; i++){
             Professor professor = new Professor();
             professor.setName("Prof_"+i);
+            professor.setEmail("Prof_"+i+"@gmail.com");
+            professor.setPhoneNumber("212615425142");
+            professor.setSpecialty((i%2 == 0) ? "Jee"+i : "Asp.Net"+i);
             professor.setCoursID((long)i);
             professorRepository.save(professor);
         }

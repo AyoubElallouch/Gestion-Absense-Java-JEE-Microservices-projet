@@ -13,5 +13,5 @@ public interface CoursRestService {
     Cours findCoursById(@PathVariable Long id);
 
     @GetMapping("/cours")
-    PagedModel<Cours> getAllCours();
+    List<Cours> getAllCours();
 }

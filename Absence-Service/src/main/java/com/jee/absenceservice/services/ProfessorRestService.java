@@ -14,5 +14,5 @@ public interface ProfessorRestService {
     @GetMapping("/professors/{id}")
     Professor findProfessorById(@PathVariable Long id);
     @GetMapping("/professors")
-    PagedModel<Professor> getAllProfessors();
+    List<Professor> getAllProfessors();
 }

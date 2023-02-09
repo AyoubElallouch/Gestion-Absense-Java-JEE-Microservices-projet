@@ -2,22 +2,21 @@ server:
   port: 8080
 spring:
   application:
-     name: Gateway-service
+    name: Gateway-service
   cloud:
-     discovery:
-       enabled: true
-     gateway:
-       globalcors:
-          cors-configurations:
-            '[/**]':
-              allowed-origins: "http://localhost:4200"
-              allowed-headers: "*"
-              allowed-methods:
-                     - GET
-                     - POST
-                     - PUT
-                     - DELETE
-                     -
+    discovery:
+      enabled: true
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-origins: "http://localhost:4200"
+            allowed-headers: "*"
+            allowed-methods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
 #     gateway:
 #       routes:
 #         - id: r1

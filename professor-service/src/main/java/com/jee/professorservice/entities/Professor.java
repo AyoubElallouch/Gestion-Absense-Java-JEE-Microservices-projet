@@ -13,5 +13,8 @@ public class Professor {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private String Specialty;
+    private String email;
+    private String phoneNumber;
     private Long coursID;
 }

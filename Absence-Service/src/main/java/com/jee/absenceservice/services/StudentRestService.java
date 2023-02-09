@@ -14,11 +14,11 @@ public interface StudentRestService {
     @GetMapping("/students/{id}")
     Student findStudentById(@PathVariable Long id);
     @GetMapping("/students")
-    PagedModel<Student> getAllStudents();
+    List<Student> getAllStudents();
     @GetMapping("/classrooms/{id}")
     Classroom findClassroomById(@PathVariable Long id);
     @GetMapping("/classrooms")
-    PagedModel<Classroom> getAllClasses();
+    List<Classroom> getAllClasses();
     @GetMapping("/classrooms/{id}/students")
-    PagedModel<Student> findStudentsByClassroom(@PathVariable Long id);
+    List<Student> findStudentsByClassroom(@PathVariable Long id);
 }

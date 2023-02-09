@@ -39,7 +39,7 @@ public class AbsenceServiceApplication implements CommandLineRunner {
             absense.setProfessorId((long)i);
             absense.setCoursId((long)i);
             absense.setClassroomId((long)i);
-            PagedModel<Student> students = studentRestService.findStudentsByClassroom((long)i);
+            List<Student> students = studentRestService.findStudentsByClassroom((long)i);
             students.forEach(S->{
                 absense.setStudentId(S.getId());
                 if(S.getId() %3 == 0)
