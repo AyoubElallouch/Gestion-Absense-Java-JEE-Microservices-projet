@@ -1,36 +1,52 @@
 package com.jee.studentservice.web;
 
+import com.jee.studentservice.dtos.ClassroomsDto;
+import com.jee.studentservice.dtos.StudentDto;
 import com.jee.studentservice.entities.Classroom;
 import com.jee.studentservice.entities.Student;
+import com.jee.studentservice.mappers.StudentsMappers;
 import com.jee.studentservice.repositories.ClassroomRepository;
 import com.jee.studentservice.repositories.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
+@RequestMapping(produces = "application/json")
 public class StudentsController {
     @Autowired
     private StudentRepository studentRepository;
     @Autowired
     private ClassroomRepository classroomRepository;
+    @Autowired
+    private StudentsMappers studentsMappers;
 
     @GetMapping("/students")
-    public List<Student> students(){
-        return studentRepository.findAll();
+    public List<StudentDto> students(){
+        List<Student> students = studentRepository.findAll();
+        List<StudentDto> studentDtos = students.stream().map(S -> {
+            return studentsMappers.fromStudent(S);
+        }).collect(Collectors.toList());
+        return studentDtos;
     }
     @GetMapping("/students/{id}")
-    public Student studentById(@PathVariable Long id){
-        return studentRepository.findById(id).get();
+    public StudentDto studentById(@PathVariable Long id){
+        return studentsMappers.fromStudent(studentRepository.findById(id).get());
     }
     @GetMapping("/classrooms")
-    public List<Classroom> classrooms(){
-        return classroomRepository.findAll();
+    public List<ClassroomsDto> classrooms(){
+        List<Classroom> classrooms = classroomRepository.findAll();
+        List<ClassroomsDto> classroomsDtos = classrooms.stream().map(C->{
+            return studentsMappers.fromClassroom(C);
+        }).collect(Collectors.toList());
+        return classroomsDtos;
     }
     @GetMapping("/classrooms/{id}")
-    public Classroom classroomById(@PathVariable Long id){
-        return classroomRepository.findById(id).get();
+    public ClassroomsDto classroomById(@PathVariable Long id){
+        return studentsMappers.fromClassroom(classroomRepository.findById(id).get());
     }
     @PostMapping("/students")
     public Student saveStudent(@RequestBody Student student){
@@ -46,6 +62,10 @@ public class StudentsController {
     }
     @DeleteMapping("/classrooms/{id}")
     public void deleteClassrooms(@PathVariable Long id){
+        List<Student> students = studentRepository.findStudentsByClassroomId(id);
+        for (Student s: students) {
+            studentRepository.delete(s);
+        }
         classroomRepository.deleteById(id);
     }
     @PutMapping("/students/{id}")
@@ -67,5 +87,13 @@ public class StudentsController {
 
         if(newclassroom.getName() != null) classroom.setName(newclassroom.getName());
         return classroomRepository.save(classroom);
+    }
+    @GetMapping("/classrooms/{id}/students")
+    public List<StudentDto> studentsByClass(@PathVariable Long id){
+        List<Student> students = studentRepository.findStudentsByClassroomId(id);
+        List<StudentDto> studentDtos = students.stream().map(S ->{
+            return studentsMappers.fromStudent(S);
+        }).collect(Collectors.toList());
+        return studentDtos;
     }
 }

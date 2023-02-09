@@ -13,7 +13,7 @@ public class ProfessorsController {
     @Autowired
     private ProfessorRepository professorRepository;
 
-    @GetMapping("/professors")
+    @GetMapping("professors")
     public List<Professor> professorList(){
         return professorRepository.findAll();
     }

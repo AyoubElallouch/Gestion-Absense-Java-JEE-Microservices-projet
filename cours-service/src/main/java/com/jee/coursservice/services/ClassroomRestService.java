@@ -14,6 +14,6 @@ public interface ClassroomRestService {
     Classroom findClassroomById(@PathVariable Long id);
 
     @GetMapping(path = "/classrooms")
-    PagedModel<Classroom> allClassrooms();
+    List<Classroom> allClassrooms();
 
 }

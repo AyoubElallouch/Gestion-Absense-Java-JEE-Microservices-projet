@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "PROFESSORS-SERVICE")
 public interface ProfessorRestService {
-    @GetMapping(path = "/professors/{id}")
+    @GetMapping(path = "professors/{id}")
     Professor findProfessorById(@PathVariable Long id);
 }
