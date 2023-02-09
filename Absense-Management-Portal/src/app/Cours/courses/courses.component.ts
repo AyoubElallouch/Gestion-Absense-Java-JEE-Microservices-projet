@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {CoursesService} from "../../services/courses.service";
 import {Router} from "@angular/router";
+import {AbsensesService} from "../../services/absenses.service";
+import {Absense} from "../../Models/Absense.model";
 
 @Component({
   selector: 'app-courses',
@@ -11,7 +13,7 @@ export class CoursesComponent implements OnInit {
   errorMessage!: string;
   courses: any;
 
-  constructor(private coursService : CoursesService, private router:Router) { }
+  constructor(private coursService : CoursesService, private router:Router, private absenseService: AbsensesService) { }
 
   ngOnInit(): void {
     this.coursService.getCourses().subscribe({
@@ -33,5 +35,6 @@ export class CoursesComponent implements OnInit {
 
   handelDeleteCours(id: number) {
     this.coursService.deleteCours(id);
+    this.router.navigateByUrl("cours");
   }
 }

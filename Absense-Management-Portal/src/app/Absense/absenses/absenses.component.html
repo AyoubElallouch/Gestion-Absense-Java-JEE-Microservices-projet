@@ -21,12 +21,12 @@
             <td>{{A.classroomId}}</td>
             <td>{{A.coursId}}</td>
             <td>
-              <button class="btn btn-success">
+              <button class="btn btn-success" (click)="handelAbsenseDetails(A.id)">
                 Details
               </button>
             </td>
             <td>
-              <button  class="btn btn-danger">
+              <button  class="btn btn-danger" (click)="handelDeleteAbsense(A.id)">
                 Delete
               </button>
             </td>

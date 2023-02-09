@@ -22,4 +22,12 @@ export class AbsensesComponent implements OnInit {
     })
   }
 
+  handelAbsenseDetails(id : number) {
+    this.router.navigateByUrl("absense-details/"+id);
+  }
+
+  handelDeleteAbsense(id : number) {
+    this.absenseService.deleteAbsense(id);
+    window.location.reload();
+  }
 }

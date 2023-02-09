@@ -6,6 +6,9 @@ import {ProfessorsService} from "../../services/professors.service";
 import {StudentsService} from "../../services/students.service";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {elementAt} from "rxjs";
+import {AbsensesService} from "../../services/absenses.service";
+import {Absense} from "../../Models/Absense.model";
+import {Session} from "../../Models/Session.model";
 
 @Component({
   selector: 'app-cours-details',
@@ -18,9 +21,8 @@ export class CoursDetailsComponent implements OnInit {
   coursID!: number;
   students: any;
   listId: Array<number> = [];
-  listIdFiltred: Array<number> = [];
   constructor(private coursService: CoursesService, private router: Router, private route: ActivatedRoute,
-              private studentService : StudentsService, private fb: FormBuilder) {
+              private studentService : StudentsService, private fb: FormBuilder, private absenseService : AbsensesService) {
     this.coursID = this.route.snapshot.params['coursID'];
   }
 
@@ -47,13 +49,29 @@ export class CoursDetailsComponent implements OnInit {
   handelDeleteCours(id: number) {
 
   }
-
-  handleSaveAbsenses() {
-
+  public handelCreateSession(){
+    let session : Session = new Session();
+    session.coursId = this.coursID;
+    session.starterDate = new Date();
+    session.closeDate = session.starterDate + this.course.duration;
+    return this.coursService.saveSession(session).subscribe();
   }
-
   handelStudentAbsense() {
-    console.log(this.listId);
+    let session: any;
+    session = this.handelCreateSession();
+    for (let i = 0; i < this.listId.length; i++) {
+        let absense : Absense = new Absense();
+        absense.coursId = this.course.id;
+        absense.professorId = this.course.professorId;
+        absense.classroomId = this.course.classroomId;
+        absense.studentId = this.listId[i];
+        absense.status = true;
+        absense.sessionId = session.id;
+        this.absenseService.saveAbsense(absense).subscribe();
+        console.log(absense);
+    }
+    console.log("Absense has been succefuly saved");
+    this.router.navigateByUrl("cours");
   }
 
   onChange(id: number) {
