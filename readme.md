@@ -56,6 +56,7 @@ Pour la creation des entities
 * class professor
 
 ![class prof.PNG](Capture%2Fback%2Fclass%20prof.PNG)
+
 Pour la creation des repositories
 * interface professor
 
@@ -74,9 +75,10 @@ Pour la creation des controllers
 
 <img alt="app-prop-prof.PNG" src="./Capture/back/app-prop-prof.PNG"/>
 
-La structure du **service students**
+### La structure du **service students**
 
 ![struct student.PNG](Capture%2Fback%2Fstruct%20student.PNG)
+
 Pour la creation des entities
 * class students
 
