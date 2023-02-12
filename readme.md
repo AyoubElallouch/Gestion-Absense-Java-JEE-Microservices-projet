@@ -4,6 +4,14 @@
 
 ![projet-abs.png](Capture%2Ffront%2Fprojet-abs.png)
 ---
+### Table des matières
+[Cahier de charge](### Cahier de charge)
+[Objectif du projet](### Objectif du projet)
+[Backend](#### Backend)
+[keycloak](### Pour la partie sécurité nous avons utilisé keycloak)
+[Frontend](#### Frontend)
+[RESULTAT DU PROJET](### RESULTAT DU PROJET)
+
 ### Cahier de charge
 ### Objectif du projet
 Créer une application web JEE **" GESTION D'ABSENCE "** avec un rendu HTML coté client qui permet de :
@@ -356,7 +364,6 @@ Creer l'ensemble des services
 ng g s le nom du service
 ``` 
 
-![struct front.PNG](Capture%2Ffront%2Fstruct%20front.PNG)
 ![struct front.PNG](Capture%2Ffront%2Fstruct%20front.PNG)
 
 Nouveau etudiant
