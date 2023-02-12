@@ -4,15 +4,9 @@
 
 ![projet-abs.png](Capture%2Ffront%2Fprojet-abs.png)
 ---
-### Table des matières
-[Cahier de charge](### Cahier de charge)
-[Objectif du projet](### Objectif du projet)
-[Backend](#### Backend)
-[keycloak](### Pour la partie sécurité nous avons utilisé keycloak)
-[Frontend](#### Frontend)
-[RESULTAT DU PROJET](### RESULTAT DU PROJET)
 
-### Cahier de charge
+
+### Cahier de charge 
 ### Objectif du projet
 Créer une application web JEE **" GESTION D'ABSENCE "** avec un rendu HTML coté client qui permet de :
 * Gérer les professeurs (ajout / supression / détail)
@@ -29,7 +23,7 @@ Le développement de cette application est basée sur deux parties avec l'utilis
 <img alt="architecture microservice.png" src="./Capture/back/architecture%20microservice.png"/>
 
 ### Structure du projet
-#### Backend
+#### Backend 
 Dans l'ensemble **des microservices** qu'on va créer dans ce projet, on va utiliser la version **2.7.8 de Spring Boot** et la version **17 de Java**.
 
 * pour les micro services **students** et **professors** ajouter les dependense suivantes
