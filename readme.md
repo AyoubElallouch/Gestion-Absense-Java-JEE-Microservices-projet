@@ -52,6 +52,8 @@ Dans l'ensemble **des microservices** qu'on va créer dans ce projet, on va util
 
 ### La structure du **service professeur**
 
+![struct prof.PNG](Capture%2Fback%2Fstruct%20prof.PNG)
+
 Pour la creation des entities 
 * class professor
 
