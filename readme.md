@@ -2,6 +2,7 @@
 
 #### *Application basée sur une architecture micro-service qui permet de gérer les absences dans une école.*
 
+![projet-abs.png](Capture%2Ffront%2Fprojet-abs.png)
 ---
 ### Cahier de charge
 ### Objectif du projet
