@@ -311,6 +311,14 @@ application properties
 
 ### Pour la partie sécurité nous avons utilisé keycloak
 
+![keycloak5.jpeg](Capture%2Fback%2Fkeycloak5.jpeg)
+
+![keycloak7.jpeg](Capture%2Fback%2Fkeycloak7.jpeg)
+
+![keycloak6.jpeg](Capture%2Fback%2Fkeycloak6.jpeg)
+
+![keycloak8.jpeg](Capture%2Fback%2Fkeycloak8.jpeg)
+
 ![keycloak.jpeg](Capture%2Fback%2Fkeycloak.jpeg)
 
 ![keycloak2.jpeg](Capture%2Fback%2Fkeycloak2.jpeg)
@@ -318,14 +326,6 @@ application properties
 ![keycloak3.jpeg](Capture%2Fback%2Fkeycloak3.jpeg)
 
 ![keycloak4.jpeg](Capture%2Fback%2Fkeycloak4.jpeg)
-
-![keycloak5.jpeg](Capture%2Fback%2Fkeycloak5.jpeg)
-
-![keycloak6.jpeg](Capture%2Fback%2Fkeycloak6.jpeg)
-
-![keycloak7.jpeg](Capture%2Fback%2Fkeycloak7.jpeg)
-
-![keycloak8.jpeg](Capture%2Fback%2Fkeycloak8.jpeg)
 
 
 #### Frontend
@@ -351,109 +351,109 @@ Creer l'ensemble des services
 ng g s le nom du service
 ``` 
 
-
-![struct front.PNG](Capture%2Fback%2Ffront%2Fstruct%20front.PNG)
+![struct front.PNG](Capture%2Ffront%2Fstruct%20front.PNG)
+![struct front.PNG](Capture%2Ffront%2Fstruct%20front.PNG)
 
 Nouveau etudiant
 
-![new std html.PNG](Capture%2Fback%2Ffront%2Fnew%20std%20html.PNG)
+![new std html.PNG](Capture%2Ffront%2Fnew%20std%20html.PNG)
 
-![new std html2.PNG](Capture%2Fback%2Ffront%2Fnew%20std%20html2.PNG)
+![new std html2.PNG](Capture%2Ffront%2Fnew%20std%20html2.PNG)
 
-![new std ts.PNG](Capture%2Fback%2Ffront%2Fnew%20std%20ts.PNG)
+![new std ts.PNG](Capture%2Ffront%2Fnew%20std%20ts.PNG)
 
-![new std ts2.PNG](Capture%2Fback%2Ffront%2Fnew%20std%20ts2.PNG)
+![new std ts2.PNG](Capture%2Ffront%2Fnew%20std%20ts2.PNG)
 
 List etudiant
 
-![std html.PNG](Capture%2Fback%2Ffront%2Fstd%20html.PNG)
+![std html.PNG](Capture%2Ffront%2Fstd%20html.PNG)
 
-![std html2.PNG](Capture%2Fback%2Ffront%2Fstd%20html2.PNG)
+![std html2.PNG](Capture%2Ffront%2Fstd%20html2.PNG)
 
-![std ts.PNG](Capture%2Fback%2Ffront%2Fstd%20ts.PNG)
+![std ts.PNG](Capture%2Ffront%2Fstd%20ts.PNG)
 
 
 Detail etudiant
 
-![std-detail html.PNG](Capture%2Fback%2Ffront%2Fstd-detail%20html.PNG)
+![std-detail html.PNG](Capture%2Ffront%2Fstd-detail%20html.PNG)
 
-![std-detail html2.PNG](Capture%2Fback%2Ffront%2Fstd-detail%20html2.PNG)
+![std-detail html2.PNG](Capture%2Ffront%2Fstd-detail%20html2.PNG)
 
-![std-detail ts.PNG](Capture%2Fback%2Ffront%2Fstd-detail%20ts.PNG)
+![std-detail ts.PNG](Capture%2Ffront%2Fstd-detail%20ts.PNG)
 
-![std-detail ts2.PNG](Capture%2Fback%2Ffront%2Fstd-detail%20ts2.PNG)
+![std-detail ts2.PNG](Capture%2Ffront%2Fstd-detail%20ts2.PNG)
 
 Liste cours
 
-![cours html.PNG](Capture%2Fback%2Ffront%2Fcours%20html.PNG)
+![cours html.PNG](Capture%2Ffront%2Fcours%20html.PNG)
 
-![cours html2.PNG](Capture%2Fback%2Ffront%2Fcours%20html2.PNG)
+![cours html2.PNG](Capture%2Ffront%2Fcours%20html2.PNG)
 
-![cours ts.PNG](Capture%2Fback%2Ffront%2Fcours%20ts.PNG)
+![cours ts.PNG](Capture%2Ffront%2Fcours%20ts.PNG)
 
-![cours ts2.PNG](Capture%2Fback%2Ffront%2Fcours%20ts2.PNG)
+![cours ts2.PNG](Capture%2Ffront%2Fcours%20ts2.PNG)
 
 Detail cours
 
-![cours-detail html.PNG](Capture%2Fback%2Ffront%2Fcours-detail%20html.PNG)
+![cours-detail html.PNG](Capture%2Ffront%2Fcours-detail%20html.PNG)
 
-![cours-detail html2.PNG](Capture%2Fback%2Ffront%2Fcours-detail%20html2.PNG)
+![cours-detail html2.PNG](Capture%2Ffront%2Fcours-detail%20html2.PNG)
 
-![cours-detail ts.PNG](Capture%2Fback%2Ffront%2Fcours-detail%20ts.PNG)
+![cours-detail ts.PNG](Capture%2Ffront%2Fcours-detail%20ts.PNG)
 
-![cours-detail ts2.PNG](Capture%2Fback%2Ffront%2Fcours-detail%20ts2.PNG)
+![cours-detail ts2.PNG](Capture%2Ffront%2Fcours-detail%20ts2.PNG)
 
 
 Liste absence
 
-![abs html.PNG](Capture%2Fback%2Ffront%2Fabs%20html.PNG)
+![abs html.PNG](Capture%2Ffront%2Fabs%20html.PNG)
 
-![abs html2.PNG](Capture%2Fback%2Ffront%2Fabs%20html2.PNG)
+![abs html2.PNG](Capture%2Ffront%2Fabs%20html2.PNG)
 
 Detail absence
 
-![abs-detail Component ts.PNG](Capture%2Fback%2Ffront%2Fabs-detail%20Component%20ts.PNG)
+![abs-detail Component ts.PNG](Capture%2Ffront%2Fabs-detail%20Component%20ts.PNG)
 
-![abs-detail html.PNG](Capture%2Fback%2Ffront%2Fabs-detail%20html.PNG)
+![abs-detail html.PNG](Capture%2Ffront%2Fabs-detail%20html.PNG)
 
-![abs-detail html2.PNG](Capture%2Fback%2Ffront%2Fabs-detail%20html2.PNG)
+![abs-detail html2.PNG](Capture%2Ffront%2Fabs-detail%20html2.PNG)
 
-![abs-detail html3.PNG](Capture%2Fback%2Ffront%2Fabs-detail%20html3.PNG)
+![abs-detail html3.PNG](Capture%2Ffront%2Fabs-detail%20html3.PNG)
 
 ### RESULTAT DU PROJET
 
 
-![add prof.PNG](Capture%2Fback%2Ffront%2Fadd%20prof.PNG)
+![add prof.PNG](Capture%2Ffront%2Fadd%20prof.PNG)
 
 
-![prof list.PNG](Capture%2Fback%2Ffront%2Fprof%20list.PNG)
+![prof list.PNG](Capture%2Ffront%2Fprof%20list.PNG)
 
 
-![prof detail.PNG](Capture%2Fback%2Ffront%2Fprof%20detail.PNG)
+![prof detail.PNG](Capture%2Ffront%2Fprof%20detail.PNG)
 
 
-![add std.PNG](Capture%2Fback%2Ffront%2Fadd%20std.PNG)
+![add std.PNG](Capture%2Ffront%2Fadd%20std.PNG)
 
 
-![std list.PNG](Capture%2Fback%2Ffront%2Fstd%20list.PNG)
+![std list.PNG](Capture%2Ffront%2Fstd%20list.PNG)
 
 
-![std detail.PNG](Capture%2Fback%2Ffront%2Fstd%20detail.PNG)
+![std detail.PNG](Capture%2Ffront%2Fstd%20detail.PNG)
 
 
-![Cours list.PNG](Capture%2Fback%2Ffront%2FCours%20list.PNG)
+![Cours list.PNG](Capture%2Ffront%2FCours%20list.PNG)
 
-![Cours detail.PNG](Capture%2Fback%2Ffront%2FCours%20detail.PNG)
-
-
-![classroom list.PNG](Capture%2Fback%2Ffront%2Fclassroom%20list.PNG)
-
-![classroom detail.PNG](Capture%2Fback%2Ffront%2Fclassroom%20detail.PNG)
+![Cours detail.PNG](Capture%2Ffront%2FCours%20detail.PNG)
 
 
-![Absence list.PNG](Capture%2Fback%2Ffront%2FAbsence%20list.PNG)
+![classroom list.PNG](Capture%2Ffront%2Fclassroom%20list.PNG)
 
-![Absence detail.PNG](Capture%2Fback%2Ffront%2FAbsence%20detail.PNG)
+![classroom detail.PNG](Capture%2Ffront%2Fclassroom%20detail.PNG)
+
+
+![Absence list.PNG](Capture%2Ffront%2FAbsence%20list.PNG)
+
+![Absence detail.PNG](Capture%2Ffront%2FAbsence%20detail.PNG)
 
 
 
