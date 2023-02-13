@@ -8,9 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cours-service" />
-        <module name="Gateway-Service" />
         <module name="student-service" />
-        <module name="Discovery-Service" />
+        <module name="Gateway-Service" />
         <module name="professor-service" />
         <module name="Discovery-Service" />
         <module name="Absence-Service" />
